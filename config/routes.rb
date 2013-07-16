@@ -2,6 +2,7 @@ CraigslistRails::Application.routes.draw do
   root to: "categories#index"
 
   get '/posts' => 'posts#index'
+  post '/posts' => 'posts#create'
   get '/posts/new' => 'posts#new'
   post '/posts/new' => 'posts#create'
 

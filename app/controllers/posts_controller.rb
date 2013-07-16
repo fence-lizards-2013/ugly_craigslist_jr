@@ -13,4 +13,14 @@ class PostsController < ApplicationController
     @post = Post.new
     @categories = Category.all
   end
+
+  def create
+    @post = Post.new(params[:post])
+    if @post.save
+      flash[:success] = "You have successfully created a new post"
+      redirect_to category_post_url(@post.category_id,@post)
+    else
+      render 'new'
+    end
+  end
 end
