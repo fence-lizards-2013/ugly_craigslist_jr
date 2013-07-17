@@ -7,8 +7,7 @@ CraigslistRails::Application.routes.draw do
   post '/posts/new' => 'posts#create'
 
   resources :categories do
-    resources :posts do
-    end
+    resources :posts
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+  $('.edit_post').on('submit', function(e) {
+    e.preventDefault();
+    $.ajax {
+      method: "put",
+      url: window.location().
+      
+    }
+  });
+});

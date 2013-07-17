@@ -9,4 +9,5 @@
 <h3>Email:</h3>
 <p><%= @post.email %></p>
 
-<%= render 'form', locals: {post: @post} %>
+
+<%= link_to 'Edit', edit_category_post_path(@post) %>

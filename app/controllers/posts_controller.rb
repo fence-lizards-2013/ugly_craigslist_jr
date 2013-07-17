@@ -23,4 +23,19 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update_attributes(params[:post])
+    if @post.save
+      flash[:success] = "You have successfully updated your post"
+      redirect_to category_post_path(@post)
+    else
+      render 'edit'
+    end
+  end
 end

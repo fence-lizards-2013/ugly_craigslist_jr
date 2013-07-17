@@ -1,0 +1,14 @@
+<h1>Edit Post: <%= @post.title %></h1>
+
+<%= form_for [:category, @post] do |f| %>
+  <%= f.label :title, "Title" %><br>
+  <%= f.text_field :title %><br>
+  <%= f.label :description, "Description" %><br>
+  <%= f.text_area :description %><br>
+  <%= f.label :price, "Price" %><br>
+  <%= f.text_field :price %><br>
+  <%= f.label :email, "Email" %><br>
+  <%= f.text_field :email %><br>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>
